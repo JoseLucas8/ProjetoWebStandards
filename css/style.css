@@ -61,6 +61,22 @@ body{
     
 }
 
+#conteudoCepCorreio{
+    width: 50vh;
+    height: 90vh;
+    border-radius: 6px;
+    background: rgb(119, 121, 245);
+    background: linear-gradient(180deg, rgba(119, 121, 245,1) 0%, rgba(168,56,229,1) 100%) ;
+    box-shadow: 4px 4px 10px 0px 
+}
+
+#conteudoCepCorreio p{
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    
+}
+
 .imageUsuario{
     font-size: 6vh;
     color: #333333;
@@ -86,8 +102,7 @@ input[type="text"], input[type="password"]{
     margin: 2vh auto;
     border: 1px solid #fff;
     text-align: center;
-    height: 45px;
-
+    height: 45px; /**/
 }
 
 input[type="text"]:hover, input[type="password"]:hover{
@@ -148,6 +163,28 @@ input[type="text"]:hover::placeholder, input[type="password"]:hover::placeholder
     border-color: #212873;
 }
 
+
+.textCorreio{
+
+   
+        font-family: "Poppins-Regular";
+        color: #000000;
+        font-size: 16px;
+        display: block;
+        width: 75%;
+        border-radius: 6px;
+        background: transparent;
+        margin: 2vh auto;
+        border: 1px solid #fff;
+        text-align: left;
+        height: 45px; /**/
+        background-color: ghostwhite;
+        color: #fff;
+        opacity: 0.8;
+        color:#000000;
+ 
+
+}
 
 
 
