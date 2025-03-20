@@ -1,0 +1,115 @@
+@font-face {
+    font-family: "Poppins-Regular";
+    src:
+        local("Poppins-Regular"),
+        url("../assets/fonts/poppins-regular/Poppins-Regular.ttf") format("truetype"),
+        url("../assets/fonts/poppins-regular/Poppins-Regular.woff") format("woff"),
+        url("../assets/fonts/poppins-regular/Poppins-Regular.woff2") format("woff2");
+
+}
+
+@font-face {
+    font-family: "Roboto-Regular";
+    src: 
+        local("Roboto-Regular"),
+        url("../assets/fonts/roboto-regular/Roboto-Regular.ttf") format("truetype"),
+        url("../assets/fonts/roboto-regular/Roboto-Regular.woff") format("woff"),
+        url("../assets/fonts/roboto-regular/Roboto-Regular.woff2") format("woff2");
+}
+
+#cssmenu{
+    width: auto;
+    display: block;
+    text-align: center;
+    font-family: "Poppins-Regular";
+    line-height: 1.2;
+}
+
+#cssmenu ul{
+    width: auto;
+    display: block;
+    font-size: 0;
+    text-align: center;
+    background-color: #333333;
+    color: #eeeeee;
+    border: transparent1;
+    margin: 0;
+    padding: 0;
+    list-style: nome;
+    position: relative;
+    z-index: 999999990;
+    border: 3px;
+}
+
+#cssmenu li{
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+/* INICIO - TOP LEVEL ELEMENTS / ELEMENTOS PRINCIPAIS DO MENU */
+
+#cssmenu > ul > li > span, #cssmenu > ul > li >  a{
+    font-size: 22px;
+    color: #ffffff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 400;
+    padding: 14px 20px;
+    letter-spacing: 2px;
+    display: block;
+    position: relative;
+    transition: all 0.3s;
+}
+#cssmenu li a{
+    color: #ffffff;
+    animation: none;
+    text-decoration: none;
+}
+
+#cssmenu li:hover > span, #cssmenu li:hover > a{
+    color: #333333;
+    background-color: #f3f3f3;
+}
+
+
+
+/* FIM - ELEMENTOS PRINCIPAIS DO MENU */
+
+
+
+/* INICIO - ELEMENTOS DO MENU DROP-DOWN */
+
+
+/* FIM - ELEMENTOS DO MENU DROP-DOWN */
+
+
+/*INICIO - FLECHA PARA BAIXO*/
+
+#cssmenu .arrow{
+    color: inherit;
+    border-style: solid;
+    border-width: 2px 2px 0 0;
+    padding: 4px;
+    transform: rotate(135deg);
+    margin-top: -8.5px;
+    margin-left: 4px;
+    position: relative;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+#cssmenu .dropdown .arrow{
+    transform: rotate(45deg);
+    top: 50%;
+    margin-top: -6px; 
+    position: absolute;
+    left: auto;
+    right: 20px;
+}
+
+/*INICIO - FLECHA PARA BAIXO*/
