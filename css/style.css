@@ -69,7 +69,7 @@ nav img{
 
 #conteudoCepCorreio{
     width: 50vh;
-    height: 90vh;
+    height: 66vh;
     border-radius: 6px;
     background: rgb(119, 121, 245);
     background: linear-gradient(180deg, rgba(119, 121, 245,1) 0%, rgba(168,56,229,1) 100%) ;
@@ -78,9 +78,8 @@ nav img{
 
 #conteudoCepCorreio p{
     text-transform: none;
-    margin: 2vh;
+    margin: 2vh 2vh 0vh 4vh;
     color: #fff;
-    
 }
 
 .imageUsuario{
@@ -97,7 +96,7 @@ nav img{
     border-radius: 50%;
 }
 
-input[type="text"], input[type="password"]{
+input[type="text"], input[type="password"], input[type="number"]{
     font-family: "Poppins-Regular";
     color: #000000;
     font-size: 16px;
@@ -109,7 +108,18 @@ input[type="text"], input[type="password"]{
     border: 1px solid #fff;
     text-align: center;
     height: 45px; /**/
+    text-decoration: none;
 }
+
+input[type="number"]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+input[type="number"]{
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+
 
 input[type="text"]:hover, input[type="password"]:hover{
     background-color: ghostwhite;
@@ -161,7 +171,6 @@ input[type="text"]:hover::placeholder, input[type="password"]:hover::placeholder
     background-color: #4351e8;
     border-color: #4351e8;
     color: #fff;
-
 }
 
 .botaoEntrar:hover{
@@ -175,16 +184,13 @@ input[type="text"]:hover::placeholder, input[type="password"]:hover::placeholder
     color: #000000;
     font-size: 16px;
     display: block;
-    width: 95% !important;
+    width: 82% !important;
     border-radius: 6px;
     background: transparent;
-    margin: 1vh !important;
+    margin: 0vh 0vh 0vh 4vh !important;
     border: 1px solid #fff;
     text-align: left !important;
-    height: 20px !important; 
-   
-      
-
+    height: 20px !important;
 }
 
 .textCorreio :hover{
@@ -202,14 +208,13 @@ input[type="text"]:hover::placeholder, input[type="password"]:hover::placeholder
 }
 
 .textCep{
-    width: 40% !important;
-    
+    width: 40% !important;  
 }
 
 .imagemCorreio{
-    background-image : url("../images/buscacep_correios.jpg");
+    background-image : url("../images/consultar_cep_viacep-removebg-preview.png");
     width: 100%;
-    height: 11vh;
+    height: 14vh;
     position: relative;
     background-size: cover;
     display: grid;
