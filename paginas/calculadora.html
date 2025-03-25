@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="../css/menu.css">
     <link rel="stylesheet" type="text/css" href="../assets/fontawesome/css/all.min.css">
 </head>
-<body>
+<body onload="Limpar()">
     <div id="cssmenu">
         <ul>
             <li ><span><a href="principal.html">Home</a></span></li>
@@ -44,32 +44,32 @@
     
     <div id="conteudo" class="conteudoCalculadora">
         <div class="grupoVisorCalculadora">
-            <input class="inputVisorCalculadora" type="number" name="visorCalculadora">
+            <input class="inputVisorCalculadora"  maxlength="10" type="number" name="visorCalculadora">
         </div>
 
         <div class="grupoBotoesCalculadora">
-            <input class="botaoCalculadora"  type="button" value="7">
-            <input class="botaoCalculadora" type="button" value="8"> 
-            <input class="botaoCalculadora" type="button" value="9"> 
-            <input class="botaoCalculadora" type="button" value="+"> 
+            <input class="botaoCalculadora" type="button" value="7" onclick="numero7()">
+            <input class="botaoCalculadora" type="button" value="8" onclick="numero8()"> 
+            <input class="botaoCalculadora" type="button" value="9" onclick="numero9()"> 
+            <input class="botaoCalculadora" type="button" value="+" onclick="soma()"> 
         </div>
         <div class="grupoBotoesCalculadora">
-            <input class="botaoCalculadora"  type="button" value="4">
-            <input class="botaoCalculadora" type="button" value="5"> 
-            <input class="botaoCalculadora" type="button" value="6"> 
-            <input class="botaoCalculadora" type="button" value="-"> 
+            <input class="botaoCalculadora" type="button" value="4" onclick="numero4()">
+            <input class="botaoCalculadora" type="button" value="5" onclick="numero5()"> 
+            <input class="botaoCalculadora" type="button" value="6" onclick="numero6()"> 
+            <input class="botaoCalculadora" type="button" value="-" onclick="subtracao()"> 
         </div>
         <div class="grupoBotoesCalculadora">
-            <input class="botaoCalculadora"  type="button" value="3">
-            <input class="botaoCalculadora" type="button" value="2"> 
-            <input class="botaoCalculadora" type="button" value="1"> 
-            <input class="botaoCalculadora" type="button" value="/"> 
+            <input class="botaoCalculadora" type="button" value="3" onclick="numero3()">
+            <input class="botaoCalculadora" type="button" value="2" onclick="numero2()"> 
+            <input class="botaoCalculadora" type="button" value="1" onclick="numero1()"> 
+            <input class="botaoCalculadora" type="button" value="/" onclick="divisao()"> 
         </div>
         <div class="grupoBotoesCalculadora">
             <input class="botaoCalculadora" type="button" value="=">
-            <input class="botaoCalculadora" type="button" value="CE"> 
-            <input class="botaoCalculadora" type="button" value="9"> 
-            <input class="botaoCalculadora" type="button" value="*"> 
+            <input class="botaoCalculadora" type="button" value="CE" onclick="Limpar()"> 
+            <input class="botaoCalculadora" type="button" value="0" onclick="numero0()"> 
+            <input class="botaoCalculadora" type="button" value="*" onclick="multiplicacao()"> 
         </div>
     </div>
     </nav>

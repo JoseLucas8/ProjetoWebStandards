@@ -265,6 +265,10 @@ input[type="text"]:hover::placeholder, input[type="password"]:hover::placeholder
 
 .inputVisorCalculadora{
     width: 86% !important;
+    text-align: right !important;
+    font-size: xx-large !important;
+    color: #fff !important;
+    padding: auto 0.5vh !important;
 }
 
 
