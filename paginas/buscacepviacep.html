@@ -48,34 +48,34 @@
 
         <p>Digite o CEP a ser procurado</p>
 
-            <input  type="text" class="textCorreio textCep" name="cep" placeholder="Ex: 12.345-678">
+            <input  type="text" class="textCorreio textCep inputCEP" name="cep" placeholder="Ex: 12.345-678">
             <input class="botaoPadrao botaoPadraoCorreios botaoEntrar" type="button" name="BuscarCepCorreio" value="Buscar" onclick="BuscarCep()">
             <input class="botaoPadrao botaoPadraoCorreios botaoLimpar" type="button" name="LimparCorreio" value="Limpar" onclick="LimparCep()">
             <br>
         
         <p>Lougradouro/Endereço</p>
         <div class="EnderecoCorreio">
-            <input  type="text" class="textCorreio" name="EnderecoCorreio" placeholder="Ex: Avenida um dois três">
+            <input  type="text" class="textCorreio inputLogradouro" name="EnderecoCorreio" placeholder="Ex: Avenida um dois três">
         </div>
         <p>Complemento</p>
         <div class="ComplementoCorreio">
-            <input  type="text" class="textCorreio" name="ComplementoCorreio" placeholder="Ex: Apto, Viela, etc.">
+            <input  type="text" class="textCorreio inputComplemento" name="ComplementoCorreio" placeholder="Ex: Apto, Viela, etc.">
         </div>
         <p>Número</p>
         <div class="NumeroCorreio">
-            <input  type="text" class="textCorreio" name="NumeroCorreio" placeholder="Ex: 12, 123, 1234, etc.">
+            <input  type="text" class="textCorreio inputNumero" name="NumeroCorreio" placeholder="Ex: 12, 123, 1234, etc.">
         </div>
         <p>Bairro</p>
         <div class="BairroCorreio">
-            <input  type="text" class="textCorreio" name="BairroCorreio" placeholder="Ex: Vila Feliz, Jardim Bonito, etc.">
+            <input  type="text" class="textCorreio inputBairro" name="BairroCorreio" placeholder="Ex: Vila Feliz, Jardim Bonito, etc.">
         </div>
         <p>Localidade/Cidade</p>
         <div class="BairroCorreio">
-            <input  type="text" class="textCorreio" name="CidadeCorreio" placeholder="Ex: São Paulo, Rio de Janeiro,etc">
+            <input  type="text" class="textCorreio inputLocalidade" name="CidadeCorreio" placeholder="Ex: São Paulo, Rio de Janeiro,etc">
         </div>
         <p>UF</p>
         <div class="BairroCorreio">
-            <input  type="text" class="textCorreio" name="UFCorreio" placeholder="Ex: SP, RJ, BA, etc.">
+            <input  type="text" class="textCorreio inputUF" name="UFCorreio" placeholder="Ex: SP, RJ, BA, etc.">
         </div>
 
     </div>
@@ -83,5 +83,6 @@
     
 </body>
         <script type="text/javascript" src="../js/script.js"></script>
+        <script type="text/javascript" src="../js/buscacep.js"></script>
         <script type="text/javascript" src="../assets/fontawesome/js/all.min.js"></script>
 </html>

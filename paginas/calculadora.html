@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="../css/menu.css">
     <link rel="stylesheet" type="text/css" href="../assets/fontawesome/css/all.min.css">
 </head>
-<body onload="Limpar()">
+<body onload="LimparTudo()">
     <div id="cssmenu">
         <ul>
             <li ><span><a href="principal.html">Home</a></span></li>
@@ -66,8 +66,8 @@
             <input class="botaoCalculadora" type="button" value="/" onclick="divisao()"> 
         </div>
         <div class="grupoBotoesCalculadora">
-            <input class="botaoCalculadora" type="button" value="=">
-            <input class="botaoCalculadora" type="button" value="CE" onclick="Limpar()"> 
+            <input class="botaoCalculadora" type="button" value="=" onclick="calcular()">
+            <input class="botaoCalculadora" type="button" value="CE" onclick="LimparTudo()"> 
             <input class="botaoCalculadora" type="button" value="0" onclick="numero0()"> 
             <input class="botaoCalculadora" type="button" value="*" onclick="multiplicacao()"> 
         </div>
