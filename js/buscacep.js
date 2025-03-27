@@ -1,3 +1,7 @@
+
+// Ligando ao site que esta fazendo 
+const urlViaCep = "https://viacep.com.br/ws/[[cep]]/json";
+
 function LimparCep(){
     document.getElementsByClassName("inputCEP")[0].value = "";
     document.getElementsByClassName("inputLogradouro")[0].value = "";
@@ -10,6 +14,91 @@ function LimparCep(){
     document.getElementsByClassName("inputCEP")[0].focus();
 }
 
-function BuscarCep(){
+// Forma atravez do FETCH
 
+function BuscarCepFetch(){
+    const requestOptions = {
+        method: "GET",
+        redirect: "follow"
+    };
+
+    let cep = document.getElementsByClassName("inputCEP")[0].value;
+
+    let url = urlViaCep.replace("[[cep]]",cep);
+
+    fetch(url, requestOptions)
+        .then((response) =>{
+            if(response.ok){
+                return response.json(); // convertendo a resposta em JSON
+            }
+
+            throw new Error(`ERRO: HTTP ${response.status}`); //exibe o erro no console
+        })
+        .then((result) => {
+            document.getElementsByClassName("inputLogradouro")[0].value = result.logradouro || "";
+            document.getElementsByClassName("inputComplemento")[0].value = result.complemento || "";
+            document.getElementsByClassName("inputBairro")[0].value = result.bairro || "";
+            document.getElementsByClassName("inputLocalidade")[0].value = result.localidade || "";
+            document.getElementsByClassName("inputUF")[0].value = result.uf || "";
+
+
+            document.getElementsByClassName("inputLogradouro")[0].disabled = true;
+            document.getElementsByClassName("inputComplemento")[0].disabled = true;
+            document.getElementsByClassName("inputBairro")[0].disabled = true;
+            document.getElementsByClassName("inputLocalidade")[0].disabled = true;
+            document.getElementsByClassName("inputUF")[0].disabled = true;
+
+            document.getElementsByClassName("inputNumero")[0].focus();
+        }) 
+        .catch((erro) => {
+            alert(`Erro ao buscar o CEP\n${erro}`)
+        });
 }
+
+// Fim da forma FETCH
+
+// Forma usando o XHR
+
+function buscaCep(){
+    let cep = document.getElementsByClassName("inputCEP")[0].value;
+    let url = urlViaCep.replace("[[cep]]", cep);
+
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", erl, true);
+
+    xhr.onreadystatechange = function(){
+        if(xhr.readyState === 4 || xhr.status === 200){
+            const result = JSON.parse(xhr.responseText); //converter em JSON
+
+            document.getElementsByClassName("inputLogradouro")[0].value = result.logradouro || "";
+            document.getElementsByClassName("inputComplemento")[0].value = result.complemento || "";
+            document.getElementsByClassName("inputBairro")[0].value = result.bairro || "";
+            document.getElementsByClassName("inputLocalidade")[0].value = result.localidade || "";
+            document.getElementsByClassName("inputUF")[0].value = result.uf || "";
+
+
+            // document.getElementsByClassName("inputLogradouro")[0].disabled = true;
+            // document.getElementsByClassName("inputComplemento")[0].disabled = true;
+            // document.getElementsByClassName("inputBairro")[0].disabled = true;
+            // document.getElementsByClassName("inputLocalidade")[0].disabled = true;
+            // document.getElementsByClassName("inputUF")[0].disabled = true;
+
+            const inputs = ["inputLogradouro", "inputComplemento", "inputBairro", "inputLocalidade", "inputUF"];
+
+            inputs.forEach((inputClass) => {
+                document.getElementsByClassName(inputClass)[0].disabled = true;
+            });
+
+            document.getElementsByClassName("inputNumero")[0].focus();
+        } else {
+            alert("Erro ao buscar CEP. status HTTP:", xhr.status);
+        }
+    }
+
+    xhr.onerror = function(){
+        alert("Erro ao buscar CEP");
+    }
+    xhr.send();
+}
+
+// Fim da forma XHR
