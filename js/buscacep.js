@@ -59,12 +59,12 @@ function BuscarCepFetch(){
 
 // Forma usando o XHR
 
-function buscaCep(){
+function BuscarCep(){
     let cep = document.getElementsByClassName("inputCEP")[0].value;
     let url = urlViaCep.replace("[[cep]]", cep);
 
     const xhr = new XMLHttpRequest();
-    xhr.open("GET", erl, true);
+    xhr.open("GET", url, true);
 
     xhr.onreadystatechange = function(){
         if(xhr.readyState === 4 || xhr.status === 200){
@@ -102,3 +102,22 @@ function buscaCep(){
 }
 
 // Fim da forma XHR
+
+document.getElementsByClassName("inputCEP")[0].addEventListener('change', function(){
+    
+    document.getElementById("loading").style.display = "block"; //apareceu a margarida
+    
+    BuscarCepFetch();
+
+    setTimeout(function(){
+        document.getElementById("loading").style.display = "none"; //desapareceu a margarida
+    }, 500)
+    
+});
+
+function hideOrShowLoading(tipo){
+    if(tipo == "hide")
+    document.getElementById("loading").style.display = "none";
+    else
+    document.getElementById("loading").style.display = "block";
+}

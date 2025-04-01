@@ -274,6 +274,34 @@ input[type="text"]:hover::placeholder, input[type="password"]:hover::placeholder
 
 /** FIM - CONTEUDO CALCULADORA **/
 
+/* CONTEUDO - CARREGAMENTO */
+
+#loading{
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    background-color: #333333;
+    opacity: 0.9;
+    height: 100%;
+}
+
+#loading img{
+    max-width: 12vh;
+    margin-top: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#loading p{
+    text-align: center;
+    color: #ffffff;
+}
+
+/* FIM - CONTEUDO - CARREGANDO */
+
 
 
 
